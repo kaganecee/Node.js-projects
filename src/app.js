@@ -31,15 +31,11 @@ app.get("",(req,res)=>{
 app.get("/about",(req,res)=>{
     res.render("about",{
         title:"About us",
+        page:"About",
         name : "Kağan"
     })
 })
 
-app.get("/help",(req,res)=>{
-    res.render("help",{
-        title : "Contact us for help"
-    })
-})
 
 app.get("/weather",(req,res)=>{
     if(!req.query.address){
@@ -78,7 +74,8 @@ app.get("/products",(req,res)=>{
 
 app.get("/help/*",(req,res)=>{
     res.render("404",{
-        title:"help",
+        page:"Help",
+        title:"If you want to help contact us.",
         errorMessage:"Help article not found"
     })
 })
