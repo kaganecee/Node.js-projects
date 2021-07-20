@@ -30,6 +30,7 @@ app.get("",(req,res)=>{
 
 app.get("/about",(req,res)=>{
     res.render("about",{
+        title:"About us",
         name : "Kağan"
     })
 })
@@ -77,7 +78,7 @@ app.get("/products",(req,res)=>{
 
 app.get("/help/*",(req,res)=>{
     res.render("404",{
-        title:"404",
+        title:"help",
         errorMessage:"Help article not found"
     })
 })
