@@ -30,9 +30,14 @@ app.get("",(req,res)=>{
 
 app.get("/about",(req,res)=>{
     res.render("about",{
-        title:"About us",
         page:"About",
         name : "Kağan"
+    })
+})
+app.get("/help",(req,res)=>{
+    res.render("help",{
+        page:"Help",
+        title : "Contact us for help"
     })
 })
 
@@ -74,8 +79,6 @@ app.get("/products",(req,res)=>{
 
 app.get("/help/*",(req,res)=>{
     res.render("404",{
-        page:"Help",
-        title:"If you want to help contact us.",
         errorMessage:"Help article not found"
     })
 })
